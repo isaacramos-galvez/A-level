@@ -1,8 +1,8 @@
 # Multiplication table game with test mode and check mode
 import random
-mode = input("Do you want to do test mode or check mode?")
+mode = input("Do you want to do test mode or learn mode?")
 
-if mode == "check":
+if mode == "learn":
     count = 1
     number = int(input("Enter a number between 1 and 12"))
     while number > 12 or number < 1:
@@ -11,6 +11,7 @@ if mode == "check":
     max = int(input("Please enter the number you wish to times up to"))
     while count <= max:
         print(f"{count}*{number} is",number * count)
+        print("  -------  ")
         count += 1
 
 elif mode == "test":
@@ -31,6 +32,6 @@ elif mode == "test":
     print(f"Well done! Your final score is {score} out of {questions} total questions!")
 
 else:
-    print("Please enter either check or test")
+    print("Please enter either learn or test")
 
     

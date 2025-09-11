@@ -11,12 +11,23 @@ print(f"The last seven items in the list are {list[-7:]}")
 list = []
 for i in range(5):
     number = int(input("Enter a number"))
-    list.append(number)
+    if number == "":
+        print("Enter a valid input")
+    elif number == str:
+        print("Enter a valid number")
+    else:
+        list.append(number)
+        list.sort()
+        print(f"The list is",list)
+        print("   ---------   ")
+        
+    
+    
 
 print(f"The smallest number in the list is {min(list)}")
 print(f"The biggest number in the list is {max(list)}")
 print("The total of all the numbers in the list is",sum(list))
-print("The average of all the numbers in the list is",sum(list)/5)
+print("The average of all the numbers in the list is",sum(list)/ len(list))
 
 
 
