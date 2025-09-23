@@ -34,6 +34,7 @@ if fruits_with_vowel == True:
     fruits_with_two_vowels = fruits.find(vowel)
     if fruits_with_two_vowels == True:
         print(fruits_with_two_vowels)
+fruits_with_two_vowels = [fruit for fruit in fruits if len([v for v in fruit if v in 'aeiou']) > 2]
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi', 'strawberry']
 vowel = ['a', 'e', 'i', 'o', 'u']
 fruits_with_more_than_two_vowels = fruits.find(vowel)
