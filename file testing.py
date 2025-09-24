@@ -1,19 +1,23 @@
-filename = 'file_text.txt'
+filename = "Computer Science Homework/file_text.txt"
 def return_file():
-    open(filename, 'r')
-    text = filename.readlines()
-    print('text')
-    if text == "":
-        print("this file is empty")
-    else:
+    with open("Computer Science Homework/file_text.txt", 'r') as file:
+        text  = file.readlines()
         print(text)
+        if text == "":
+            print("this file is empty")
+        else:
+            print(text)
     file.close()
 
 def menu():
     file_chosen = input("What file do you want to edit?")
     open(file_chosen, 'w')
-    input_text = input("What do you want to right to the file?")
-    file_chosen.write(input_text)
+    if file_chosen == False:
+        print("That file cannot be found")
+    else:
+        input_text = input("What do you want to right to the file?")
+        file_chosen.write(input_text)
+        return_file()
 
 choice_continue = "yes"
 while choice_continue == "yes":
