@@ -20,7 +20,7 @@ def menu():
 
 choice_continue = "yes"
 while choice_continue == "yes":
-    return_file()
+    return_file(filename)
     menu()
     result  = input("Do you want to continue?")
     if result != "yes":
