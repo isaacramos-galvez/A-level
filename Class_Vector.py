@@ -20,11 +20,11 @@ class Vector:
         return Vector(sub_i, sub_j)
        
     def magnitude(self):
-        magnitude =  math.sqrt(self.i**2 + self.j**2)
+        magnitude =  round(math.sqrt(self.i**2 + self.j**2),2)
         return magnitude
         
     def find_angle(self):
-        angle = math.degrees(math.atan(self.j/self.i))
+        angle = round(math.degrees(math.atan(self.j/self.i)),2)
         return angle
 
 x = random.randint(1,10)
