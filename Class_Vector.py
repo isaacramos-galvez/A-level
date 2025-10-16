@@ -28,9 +28,9 @@ class Vector:
         return angle
 
 x = random.randint(1,10)
-vec1 = (x,random.randint(x,x+10))
+vec1 = Vector(x,random.randint(x,x+10))
 y = random.randint(1,10)
-vec2 = (y,random.randint(y,y+10))
+vec2 = Vector(y,random.randint(y,y+10))
 
 print(vec1)
 print(vec2)
