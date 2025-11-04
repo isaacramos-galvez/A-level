@@ -27,10 +27,24 @@ class Vector:
         angle = round(math.degrees(math.atan(self.j/self.i)),2)
         return angle
 
+    def mul(self, scalar):
+        
+        scalar = int(input("What is the value of the scalar you want to input?"))
+        for i in 
+
+    def __rmul_(self, scalar):
+        mul_veci = vec1 * scalar
+        mul_vecj = vec2 * scalar
+        return mul_veci
+        return mul_vecj
+
 x = random.randint(1,10)
 vec1 = Vector(x,random.randint(x,x+10))
 y = random.randint(1,10)
 vec2 = Vector(y,random.randint(y,y+10))
+
+def test_vector():
+    pass
 
 print(vec1)
 print(vec2)
@@ -38,5 +52,7 @@ print(vec1.magnitude())
 print(vec2.magnitude())
 print(vec1.find_angle())
 print(vec2.find_angle())
+print(vec1 * random.randint(1,10))
+print(vec2 * random.randint(1,10))
 print(vec1-vec2)
 print(vec1+vec2)

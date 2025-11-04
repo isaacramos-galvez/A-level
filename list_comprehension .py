@@ -39,13 +39,13 @@ fruits_with_two_vowels = [fruit for fruit in fruits if len([v for v in fruit if 
 vowel = ['a', 'e', 'i', 'o', 'u']
 fruits_with_more_than_two_vowels = fruits.find(vowel)
 # Exercise 5 - make a list that contains each fruit with more than 5 characters
-for fruit in range(len(fruits)) if fruits[0:len(fruits)] > 5:
+for fruit in range(len(fruits)) if fruits[0:len(fruits)] > 5 else endif:
     print(fruit)
 # Exercise 6 - make a list that contains each fruit with exactly 5 characters
-for fruit in range(len(fruits)) if fruits[0:len(fruits)] == 5:
+for fruit in range(len(fruits)) if fruits[0:len(fruits)] == 5 else endif:
     print(fruit)
 # Exercise 7 - Make a list that contains fruits that have less than 5 characters
-for fruit in range(len(fruits)) if fruits[0:len(fruits)] < 5:
+for fruit in range(len(fruits)) if fruits[0:len(fruits)] < 5 else endif:
     print(fruit)
 # Exercise 8 - Make a list containing the number of characters in each fruit. Output would be [5, 4, 10, etc... ]
 fruit_length = [len(fruits) for fruit in fruits]
