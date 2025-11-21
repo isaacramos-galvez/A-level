@@ -17,7 +17,7 @@ class LinkedList:
     A stack using a singly linked list to create a stack.
     """
     def __init__(self):
-        self._head_node = None
+        self._head_node = none
         self._size = 0
 
     def __len__(self):
@@ -25,7 +25,7 @@ class LinkedList:
         return self._size
 
     def push(self, data):
-        new_node = self.set_next()
+        new_node = Node(self.set_next())
         self._head_node = new_node
         self._size += 1
         return self._head_node
@@ -50,6 +50,14 @@ class LinkedList:
     
     def __str__(self):
         """ Defines what should be displayed when the user prints a linked list object. """
+        result = ""
+        current = self._head_node
+        while current is not none:
+            result += str(current.get_data())
+            current = currnet.get_next()
+        return result
+
+
         return "A linked list"
 
 if __name__ == "__main__":
