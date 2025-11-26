@@ -16,7 +16,7 @@ count1 = 0
 list1 = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 for i in range(len(word1)):
     if word1_list[index2] == list[index1]:
-        letters1[word1_list[index]] += 1 #  Adds a one to the index of the list of the alphabet if this letter is found
+        letters1[word1_list[index1]] += 1 #  Adds a one to the index of the list of the alphabet if this letter is found
     elif word1_list[index2] != list[index1]:
         index1 += 1 
 

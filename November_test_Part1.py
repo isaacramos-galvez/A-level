@@ -7,7 +7,7 @@ while product < x:
 
 if x == product:
     product = 1
-    for N in range(1,factor):
+    for N in range(1,factor + 1):
         product = product * N
         print(N)
 else:
