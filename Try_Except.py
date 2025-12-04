@@ -1,5 +1,8 @@
 usernames = ['Cheetara', 'Lion-O', 'Snarf', 'Tygra', 'Panthro', 'Mumm-Ra']
 
+class EnemyError(Exception):
+    pass
+
 
 def login_unhandled(usernumber):
     print("\n -- The Basic Version --\n")
@@ -8,6 +11,8 @@ def login_unhandled(usernumber):
     except ValueError:
         print("Your input is a string, please enter a integer")
         return False
+    if number == 5:
+        raise EnemyError("ALERT!")
     try:
         print("Welcome", usernames[number], "user number", number,".")
     except IndexError:
