@@ -47,11 +47,9 @@ class MainWindow(qtw.QMainWindow):
             self.label2 = qtw.QLabel("Please enter a number")
             layout.addWidget(self.label2)
         else:
-            self.label2 = qtw.QLabel("")
-            layout.addWidget(self.label2, 2, 2) 
             converted_value = int(self.edit_box.text()) - 273
             converted_value = f"{str(converted_value)} Celcius"
-            self.label2 = qtw.QLabel(converted_value)
+            self.label2.setText(converted_value)
             layout.addWidget(self.label2, 2, 2)
 
 
