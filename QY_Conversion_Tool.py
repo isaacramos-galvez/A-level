@@ -10,14 +10,6 @@ class MainWindow(qtw.QMainWindow):
         super().__init__()
         self.setWindowTitle("Template Window")
         widget = qtw.QWidget()
-        #self.combo = QcomboBox()
-        #self.combo.addItems("One", "Two", "Three")
-        #self.combo.setCurrentIndex(2)
-        #layout.addwidget(self.combo)
-        #widget.setLayout(layout)
-
-        #self.label = qtw.QLabel("Template")
-        #layout.addWidget(self.label)
 
         self.ok_btn = qtw.QPushButton("Done")
         self.ok_btn.clicked.connect(self.button_click)
@@ -28,14 +20,11 @@ class MainWindow(qtw.QMainWindow):
         self.label1 = qtw.QLabel("Celcius")
         self.label2 = qtw.QLabel("0")
         
-
         layout.addWidget(self.label, 1, 1)
         layout.addWidget(self.label1, 2, 1)
         layout.addWidget(self.edit_box, 1, 2)
         layout.addWidget(self.ok_btn, 3, 1, 1, 3)
         
-        # Set the central widget of the Window. Widget will expand
-        # to take up all the space in the window by default.
         self.setCentralWidget(widget)
         widget.setLayout(layout)
 
@@ -43,23 +32,18 @@ class MainWindow(qtw.QMainWindow):
     #    print(new_text)
 
     def button_click(self):
-        if self.edit_box.text().isnumeric() == False:
+        if self.edit_box.text().isdigit() == False:
             self.label2 = qtw.QLabel("Please enter a number")
             layout.addWidget(self.label2)
         else:
-            converted_value = int(self.edit_box.text()) - 273
+            converted_value = float(self.edit_box.text()) - 273.0
             converted_value = f"{str(converted_value)} Celcius"
             self.label2.setText(converted_value)
             layout.addWidget(self.label2, 2, 2)
 
 
-# You need one (and only one) QApplication instance per application.
-# Pass in sys.argv to allow command line arguments for your app.
-# If you know you won't use command line arguments QApplication([]) works too.
-
 app = qtw.QApplication([])
 window = MainWindow()
 window.show()
 
-# Start the event loop.
 app.exec()
