@@ -18,5 +18,6 @@ today = datetime.today()
 a = find_birthday()
 b = calculate_days(a, today)
 
-print(b)
+print(today)
+print(f"{b} days")
 
