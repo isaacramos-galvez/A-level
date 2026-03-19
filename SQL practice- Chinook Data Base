@@ -1,0 +1,33 @@
+select title
+from albums
+where artistID = 12 ;
+
+
+select * 
+from albums 
+where Title like '%Greatest%';
+
+select  Distinct artists.Name, tracks.Name, albums.Title, tracks.albumID, albums.albumID
+from tracks
+join artists on albums.artistId = artists.artistID
+join albums on tracks.albumId = albums.albumID
+where albums.Title like'%Greatest%';
+
+select customers.FirstName, customers.LastName, invoices.InvoiceID, invoices.Total 
+from invoices
+join customers on customers.customerID = invoices.customerID
+where invoices.Total > 20;
+
+select customers.Firstname, customers.LastName, SUM(invoices.Total) From invoices
+Join customers on customers.CustomerID = invoices.CustomerId
+Group By customers.CustomerId
+Order By LastName;
+
+select genres.Name as 'Genre', SUM(invoice_items.UnitPrice * invoice_items.Quantity) as TotalSpent
+From invoices
+join invoice_items on invoice_items.invoiceID = Invoices.invoiceID
+join tracks on invoice_items.trackId = Tracks.TrackID
+join genres on genres.genreID = tracks.genreID
+where invoices.InvoiceDate BETWEEN '2010-01-01' AND '2010-12-31'
+GROUP BY genres.genreID
+Order by TotalSpent Desc;
