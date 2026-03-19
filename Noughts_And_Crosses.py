@@ -1,3 +1,4 @@
+import random
 class BoardState:
     def __init__(self):
         self.row1 = [' ', '|', ' ','|', ' ']
@@ -46,6 +47,8 @@ class BoardState:
 
             index_move = self.convert_index_move(index_move)
 
+            self.display_board()
+
     def computer_move(self):
 
         row_random = random.randint(1, 3)
@@ -81,6 +84,8 @@ class BoardState:
         elif index_random == 3:
             index_random += 1
 
+        self.display_board()
+        
 while True:
     board = BoardState()
     board.display_board()
